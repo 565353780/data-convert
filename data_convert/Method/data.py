@@ -22,8 +22,8 @@ def numpy2jittor(data: numpy.ndarray):
 
 def torch2numpy(data: torch.Tensor):
     if data.device != 'cpu':
-        return data.cpu().numpy()
-    return data.numpy()
+        return data.cpu().detach().numpy()
+    return data.detach().numpy()
 
 def torch2list(data: torch.Tensor):
     return torch2numpy(data).tolist()
