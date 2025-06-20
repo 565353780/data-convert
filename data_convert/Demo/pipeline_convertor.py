@@ -3,12 +3,13 @@ from data_convert.Module.pipeline_convertor import PipelineConvertor
 
 
 def demo():
-    work_space = "./data/"
+    data_space = "./data/"
+    output_space = "./output/data/"
 
     convertor_list = [
-        ExampleConvertor(work_space + "mesh/", work_space + "mesh_type/"),
-        ExampleConvertor(work_space + "mesh_type/", work_space + "mesh_type_2/"),
-        ExampleConvertor(work_space + "mesh_type_2/", work_space + "mesh_type_3/"),
+        ExampleConvertor(data_space + "mesh/", output_space + "mesh_type/"),
+        ExampleConvertor(output_space + "mesh_type/", output_space + "mesh_type_2/"),
+        ExampleConvertor(output_space + "mesh_type_2/", output_space + "mesh_type_3/"),
     ]
 
     data_type_list = [
