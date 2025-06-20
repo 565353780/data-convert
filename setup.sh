@@ -1,3 +1,3 @@
-pip install numpy
-pip install jittor
-pip install torch torchvision torchaudio
+pip install -U numpy
+
+pip install -U torch torchvision torchaudio
