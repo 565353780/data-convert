@@ -11,5 +11,9 @@ def demo():
     example_convertor = ExampleConvertor(
         source_root_folder_path, target_root_folder_path
     )
+
+    rel_base_path = "0"
+    example_convertor.convertOneShape(rel_base_path, source_data_type, target_data_type)
+
     example_convertor.convertAll(source_data_type, target_data_type, output_freq)
     return True

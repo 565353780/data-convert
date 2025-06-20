@@ -21,5 +21,8 @@ def demo():
 
     pipeline_convertor = PipelineConvertor(convertor_list)
 
+    rel_base_path = "0"
+    pipeline_convertor.convertOneShape(rel_base_path, data_type_list)
+
     pipeline_convertor.convertAll(data_type_list)
     return True
