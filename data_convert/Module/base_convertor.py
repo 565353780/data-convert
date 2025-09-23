@@ -59,14 +59,14 @@ class BaseConvertor(ABC):
         with open(start_tag_file_path, "w") as f:
             f.write("\n")
 
-        if target_data_type == "/":
-            os.makedirs(target_path, exist_ok=True)
-        else:
-            createFileFolder(target_path)
-
         tmp_target_path = (
             self.target_root_folder_path + rel_base_path + "_tmp" + target_data_type
         )
+
+        if target_data_type == "/":
+            os.makedirs(tmp_target_path, exist_ok=True)
+        else:
+            createFileFolder(tmp_target_path)
 
         if not self.convertData(source_path, tmp_target_path):
             print("[ERROR][BaseConvertor::convertOneShape]")
